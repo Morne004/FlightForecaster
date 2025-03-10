@@ -4,9 +4,8 @@ import streamlit as st
 
 def get_supabase_client():
     """Create and return a Supabase client"""
-    # Get connection details from Streamlit secrets
-    supabase_url = st.secrets["connections"]["supabase"]["url"]
-    supabase_key = st.secrets["connections"]["supabase"]["key"]
+    supabase_url = st.secrets["supabase_url"]
+    supabase_key = st.secrets["supabase_key"]
     
     return create_client(supabase_url, supabase_key)
 
